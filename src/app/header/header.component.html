@@ -1,0 +1,6 @@
+<header class="header">
+  <nav class="header__nav">
+    <img class="header__logo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png" alt="Instagram Logo">
+    <img *ngIf="user" class="header__avatar" [src]="user?.photoURL" alt="{{user.displayName}}">
+  </nav>
+</header>

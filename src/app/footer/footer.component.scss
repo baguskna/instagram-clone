@@ -1,0 +1,38 @@
+.footer {
+  align-items: center;
+  background-color: #fff;
+  border-top: 1px solid lightgray;
+  bottom: 0;
+  display: flex;
+  height: 45px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.footer__add-button {
+  background-color: black;
+  border: none;
+  color: #fff;
+  margin-right: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.footer__login-button,
+.footer__logout-button {
+  border: none;
+  color: #fff;
+  margin-left: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.footer__login-button {
+  background-color: rgb(78, 240, 78);
+}
+
+.footer__logout-button {
+  background-color: red;
+}

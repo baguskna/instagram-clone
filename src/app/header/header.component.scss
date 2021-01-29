@@ -1,0 +1,27 @@
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  object-fit: contain;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.header__nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__logo {
+  width: 100px;
+}
+
+.header__avatar {
+  border-radius: 50%;
+  width: 25px;
+}

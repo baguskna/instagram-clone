@@ -1,0 +1,44 @@
+.post {
+  background-color: #fff;
+  border: 1px solid lightgrey;
+  margin-bottom: 45px;
+  max-width: 500px;
+
+  h3,
+  h4 {
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+}
+
+.post__img {
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+  object-fit: contain;
+  width: 100%;
+}
+
+.post__text {
+  font-weight: normal;
+  padding: 20px;
+}
+
+.post__header {
+  align-items: center;
+  display: flex;
+  padding: 20px;
+}
+
+.post__avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 35px;
+}
