@@ -1,7 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterContentInit, Component, Input, OnInit } from '@angular/core';
 
 import { Post } from '../interface/Post';
 import { User } from '../interface/User';
+import { AuthService } from '../services/auth.service';
 import { PostService } from '../services/post.service';
 
 @Component({
@@ -9,20 +10,46 @@ import { PostService } from '../services/post.service';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
-export class PostComponent implements OnInit {
+export class PostComponent implements OnInit, AfterContentInit {
   @Input() post: Post;
   @Input() user: User;
 
   constructor(
-    private postService: PostService
+    private authService: AuthService,
+    private postService: PostService,
   ) { }
 
   ngOnInit(): void {
+    this.authService.user
+    .subscribe(
+      (user: User) => {
+        this.postService.getLikesPost(user.uid)
+        .subscribe(
+          data => console.log(data)
+        )
+      }
+    );
   }
 
-  delete(id: string, uid: string): void {
-    if (uid === this.user.uid) {
-      this.postService.deletePost(id);
+  ngAfterContentInit(): void {
+  }
+
+  like(): void {
+    if (!this.user) {
+      this.authService.login();
+    } else {
+      this.post.likes += 1;
+      this.postService.likePost(this.post, this.user.uid);
+    }
+  }
+
+  get showLike(): string {
+    return !this.post.likes ? 'like' : 'likes';
+  }
+
+  delete(): void {
+    if (this.post.uid === this.user.uid) {
+      this.postService.deletePost(this.post.id, this.post.imageUrl);
     } else {
       throw new Error('You are not the owner');
     }

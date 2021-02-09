@@ -72,7 +72,9 @@ export class AddComponent implements OnInit {
             timestamp: new Date().getTime(),
             owner: this.user.displayName,
             ownerPhotoUrl: this.user.photoURL,
-            uid: this.user.uid
+            uid: this.user.uid,
+            // initial post has 0 likes
+            likes: 0,
           }
           this.postService.addPost(data);
           this.uploadProgress = new Observable<number>();

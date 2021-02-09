@@ -4,10 +4,14 @@
       <img class="post__avatar" [src]="post.ownerPhotoUrl" alt="{{post.owner}}">
       <h3>{{post.owner}}</h3>
     </div>
-    <button class="post__delete" *ngIf="post.uid === user?.uid" (click)="delete(post.id, post.uid)">
+    <button class="post__delete" *ngIf="post.uid === user?.uid" (click)="delete()">
       <i class="material-icons">delete</i>
     </button>
   </div>
   <img class="post__img" [src]="post.imageUrl" alt="User Picture">
-  <h4 class="post__text"><strong>{{post.owner}}</strong> {{post.caption}}</h4>
+  <div class="post__text-wrapper">
+   <!-- <i class="material-icons" (click)="like()">favorite_border</i>
+    <p class="post__likes">{{ post.likes }} {{showLike}}</p> -->
+    <h4 class="post__text"><strong>{{post.owner}}</strong> {{post.caption}}</h4>
+  </div>
 </div>

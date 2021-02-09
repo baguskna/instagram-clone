@@ -5,7 +5,8 @@
   max-width: 500px;
 
   h3,
-  h4 {
+  h4,
+  p {
     margin: 0;
   }
 
@@ -26,9 +27,13 @@
   width: 100%;
 }
 
+.post__text-wrapper {
+  margin-left: 20px;
+  padding-bottom: 10px;
+}
+
 .post__text {
   font-weight: normal;
-  padding: 7px 20px;
 }
 
 .post__header {
@@ -55,4 +60,12 @@
   background-color: transparent;
   border: none;
   color: red;
+}
+
+.material-icons {
+  cursor: pointer;
+}
+
+.post__likes {
+  font-weight: 700;
 }
