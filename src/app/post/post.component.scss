@@ -28,17 +28,31 @@
 
 .post__text {
   font-weight: normal;
-  padding: 20px;
+  padding: 7px 20px;
 }
 
 .post__header {
   align-items: center;
   display: flex;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
 .post__avatar {
   border-radius: 50%;
+  height: 35px;
   margin-right: 10px;
   width: 35px;
+}
+
+.post__header-first-tier {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+}
+
+.post__delete {
+  background-color: transparent;
+  border: none;
+  color: red;
 }

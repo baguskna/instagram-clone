@@ -1,48 +1,66 @@
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, .75);
-  z-index: 50;
-}
-
-.alert-box {
-  position: fixed;
-  top: 30vh;
-  left: 20vw;
-  width: 60vw;
-  padding: 16px;
-  z-index: 100;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .26);
-  height: fit-content;
-}
-
-.alert-box-actions {
-  text-align: right;
-}
-
-.form__post {
+.add__modal-form {
   display: flex;
   justify-content: center;
+
+  input,
+  progress {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    align-self: baseline;
+    padding-bottom: 10px;
+  }
+
+  progress {
+    align-self: center;
+  }
 }
 
-input,
-progress {
-  margin-bottom: 10px;
+
+.add_modal-btn {
+  background-color: blue;
+  border: none;
+  color: white;
+  font-weight: 400;
+  padding: 10px;
+  text-transform: uppercase;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+.add__modal-backdrop {
+  background-color: rgba(0,0,0,0.4);
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
-label {
-  align-self: baseline;
+.add__modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  left: 50%;
+  height: fit-content;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 400px;
+  z-index: 10;
 }
 
-progress {
-  align-self: center;
+.add_modal-close {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  position: fixed;
+  right: 0;
+  top: 0;
 }

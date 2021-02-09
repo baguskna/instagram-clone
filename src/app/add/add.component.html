@@ -1,15 +1,17 @@
-<div class="backdrop" (click)="onClose()"></div>
-<div class="alert-box">
-  <div class="alert-box-actions">
-    <div class="form__post">
+<div class="add__modal-backdrop" (click)="onClose()"></div>
+<div class="add__modal-content">
+  <div class="add__modal">
+    <button class="add_modal-close" (click)="onClose()">
+      <i class="material-icons">cancel</i>
+    </button>
+    <div class="add__modal-form">
       <form (ngSubmit)="onSubmitForm($event)" [formGroup]="formUpload">
-        <progress max="100" [value]="(uploadProgress | async)"></progress>
+        <progress *ngIf="uploadProgress" max="100" [value]="(uploadProgress | async)"></progress>
         <label for="caption">Caption</label>
         <input type="text" formControlName="caption" placeholder="Type your story here...">
         <input type="file" formControlName="file" (change)="upload($event)" accept=".png,.jpg,.jpeg">
-        <button type="submit">Submit</button>
+        <button class="add_modal-btn" type="submit">Submit</button>
       </form>
     </div>
-    <button class="btn btn-primary" (click)="onClose()">Close</button>
   </div>
 </div>
