@@ -1,37 +1,13 @@
-.add__modal-form {
-  display: flex;
-  justify-content: center;
-
-  input,
-  progress {
-    margin-bottom: 20px;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  label {
-    align-self: baseline;
-    padding-bottom: 10px;
-  }
-
-  progress {
-    align-self: center;
-  }
-}
-
-.add_modal-btn {
-  background-color: blue;
+.delete__modal-btn {
+  background-color: transparent;
   border: none;
-  color: white;
+  color: red;
   font-weight: 400;
   padding: 10px;
   text-transform: uppercase;
 }
 
-.add__modal-backdrop {
+.delete__modal-backdrop {
   background-color: rgba(0,0,0,0.4);
   height: 100%;
   left: 0;
@@ -42,7 +18,7 @@
   z-index: 1;
 }
 
-.add__modal-content {
+.delete__modal-content {
   background-color: #fefefe;
   border: 1px solid #888;
   left: 50%;
@@ -55,11 +31,26 @@
   z-index: 10;
 }
 
-.add_modal-close {
+.delete_modal-close {
   background-color: transparent;
   border: none;
   padding: 5px;
   position: fixed;
   right: 0;
   top: 0;
+}
+
+.delete__modal {
+  padding: 10px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.delete__modal-confirm {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

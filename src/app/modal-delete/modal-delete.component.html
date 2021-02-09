@@ -1,0 +1,12 @@
+<div class="delete__modal-backdrop" (click)="onClose()"></div>
+<div class="delete__modal-content">
+  <div class="delete__modal">
+    <button class="delete_modal-close">
+      <i class="material-icons" (click)="onClose()">cancel</i>
+    </button>
+    <div class="delete__modal-confirm">
+      <p>Are you sure want to delete?</p>
+      <button class="delete__modal-btn" (click)="delete()">delete</button>
+    </div>
+  </div>
+</div>

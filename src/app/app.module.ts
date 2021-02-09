@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { PostComponent } from './post/post.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddComponent } from './add/add.component';
+import { ModalDeleteComponent } from './modal-delete/modal-delete.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AddComponent } from './add/add.component';
     HomeComponent,
     PostComponent,
     FooterComponent,
-    AddComponent
+    AddComponent,
+    ModalDeleteComponent
   ],
   imports: [
     BrowserModule,

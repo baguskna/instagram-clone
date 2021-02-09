@@ -13,6 +13,7 @@ import { PostService } from '../services/post.service';
 export class PostComponent implements OnInit, AfterContentInit {
   @Input() post: Post;
   @Input() user: User;
+  deleteModal = false;
 
   constructor(
     private authService: AuthService,
@@ -49,9 +50,13 @@ export class PostComponent implements OnInit, AfterContentInit {
 
   delete(): void {
     if (this.post.uid === this.user.uid) {
-      this.postService.deletePost(this.post.id, this.post.imageUrl);
+      this.deleteModal = true;
     } else {
-      throw new Error('You are not the owner');
+      alert('You are not the owner');
     }
+  }
+
+  onClose() {
+    this.deleteModal = false;
   }
 }
