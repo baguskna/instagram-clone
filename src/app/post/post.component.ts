@@ -26,7 +26,6 @@ export class PostComponent implements OnInit, AfterContentInit {
       (user: User) => {
         this.postService.getLikesPost(user.uid)
         .subscribe(
-          data => console.log(data)
         )
       }
     );

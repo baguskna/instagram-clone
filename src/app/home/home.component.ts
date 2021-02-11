@@ -50,7 +50,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   getPosts(): void {
     this.postService.getPosts()
     .subscribe((posts: Array<Post>) => {
-      console.log(posts)
       this.posts = posts;
     });
   }
