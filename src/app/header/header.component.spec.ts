@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
+import { AuthService } from '../services/auth.service';
+import { Subject } from 'rxjs';
+import { User } from '../interface/User';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -8,7 +11,10 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [ HeaderComponent ],
+      providers: [
+        { provide: AuthService, useClass: AuthServiceStub }
+      ]
     })
     .compileComponents();
   }));
@@ -23,3 +29,11 @@ describe('HeaderComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+class AuthServiceStub {
+  user = new Subject<User>();
+
+  constructor() {
+    this.user.next();
+  }
+}

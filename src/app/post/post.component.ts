@@ -15,37 +15,34 @@ export class PostComponent implements OnInit, AfterContentInit {
   @Input() user: User;
   deleteModal = false;
 
-  constructor(
-    private authService: AuthService,
-    private postService: PostService,
-  ) { }
+  constructor( ) { }
 
   ngOnInit(): void {
-    this.authService.user
-    .subscribe(
-      (user: User) => {
-        this.postService.getLikesPost(user.uid)
-        .subscribe(
-        )
-      }
-    );
+    // this.authService.user
+    // .subscribe(
+    //   (user: User) => {
+    //     this.postService.getLikesPost(user.uid)
+    //     .subscribe(
+    //     )
+    //   }
+    // );
   }
 
   ngAfterContentInit(): void {
   }
 
-  like(): void {
-    if (!this.user) {
-      this.authService.login();
-    } else {
-      this.post.likes += 1;
-      this.postService.likePost(this.post, this.user.uid);
-    }
-  }
+  // like(): void {
+  //   if (!this.user) {
+  //     this.authService.login();
+  //   } else {
+  //     this.post.likes += 1;
+  //     this.postService.likePost(this.post, this.user.uid);
+  //   }
+  // }
 
-  get showLike(): string {
-    return !this.post.likes ? 'like' : 'likes';
-  }
+  // get showLike(): string {
+  //   return !this.post.likes ? 'like' : 'likes';
+  // }
 
   delete(): void {
     if (this.post.uid === this.user.uid) {

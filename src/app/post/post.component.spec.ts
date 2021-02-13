@@ -1,5 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Subject } from 'rxjs';
 
+import { User } from '../interface/User';
+import { AuthService } from '../services/auth.service';
+import { PostService } from '../services/post.service';
 import { PostComponent } from './post.component';
 
 describe('PostComponent', () => {
@@ -8,7 +12,7 @@ describe('PostComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostComponent ]
+      declarations: [ PostComponent ],
     })
     .compileComponents();
   }));

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../interface/User';
 
+import { User } from '../interface/User';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -15,6 +15,10 @@ export class FooterComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.getUser();
+  }
+
+  getUser(): void {
     this.authService.user
     .subscribe((user: User) => {
       this.user = user;
@@ -31,7 +35,6 @@ export class FooterComponent implements OnInit {
 
   add(): void {
     if (!this.user) {
-      // alert('Login First!');
       this.authService.login();
     } else {
       this.addData = true;

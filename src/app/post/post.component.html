@@ -1,23 +1,23 @@
 <div class="post">
   <div class="post__header">
     <div class="post__header-first-tier">
-      <img class="post__avatar" [src]="post.ownerPhotoUrl" alt="{{post.owner}}">
-      <h3>{{post.owner}}</h3>
+      <img class="post__avatar" [src]="post?.ownerPhotoUrl" alt="{{post?.owner}}">
+      <h3>{{post?.owner}}</h3>
     </div>
-    <button class="post__delete" *ngIf="post.uid === user?.uid" (click)="delete()">
+    <button class="post__delete" *ngIf="post?.uid === user?.uid" (click)="delete()">
       <i class="material-icons">delete</i>
     </button>
   </div>
-  <img class="post__img" [src]="post.imageUrl" alt="User Picture">
+  <img class="post__img" [src]="post?.imageUrl" alt="User Picture">
   <div class="post__text-wrapper">
    <!-- <i class="material-icons" (click)="like()">favorite_border</i>
     <p class="post__likes">{{ post.likes }} {{showLike}}</p> -->
-    <h4 class="post__text"><strong>{{post.owner}}</strong> {{post.caption}}</h4>
+    <h4 class="post__text"><strong>{{post?.owner}}</strong> {{post?.caption}}</h4>
   </div>
   <app-modal-delete
-  *ngIf="deleteModal"
-  [id]="post.id"
-  [imageUrl]="post.imageUrl"
-  (close)="onClose()">
+    *ngIf="deleteModal"
+    [id]="post.id"
+    [imageUrl]="post.imageUrl"
+    (close)="onClose()">
   </app-modal-delete>
 </div>
