@@ -2,6 +2,7 @@
   background-color: transparent;
   border: none;
   color: red;
+  cursor: pointer;
   font-weight: 400;
   padding: 10px;
   text-transform: uppercase;
@@ -35,6 +36,7 @@
 .delete_modal-close {
   background-color: transparent;
   border: none;
+  cursor: pointer;
   padding: 5px;
   position: fixed;
   right: 0;
