@@ -26,6 +26,7 @@
   background-color: blue;
   border: none;
   color: white;
+  cursor: pointer;
   font-weight: 400;
   padding: 10px;
   text-transform: uppercase;
@@ -58,6 +59,7 @@
 .add_modal-close {
   background-color: transparent;
   border: none;
+  cursor: pointer;
   padding: 5px;
   position: fixed;
   right: 0;
