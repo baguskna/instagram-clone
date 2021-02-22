@@ -11,30 +11,32 @@
   z-index: 999;
 }
 
-.footer__add-button {
-  background-color: black;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  margin-right: 20px;
-  padding: 10px;
-  text-transform: uppercase;
+.footer__wrapper {
+  display: flex;
+
+  .material-icons {
+    cursor: pointer;
+  }
 }
 
-.footer__login-button,
-.footer__logout-button {
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  margin-left: 20px;
-  padding: 10px;
-  text-transform: uppercase;
-}
+// .footer__add-button {
+//   background-color: black;
+//   border: none;
+//   color: #fff;
+//   cursor: pointer;
+//   padding: 10px;
+//   text-transform: uppercase;
+// }
 
-.footer__login-button {
-  background-color: rgb(78, 240, 78);
-}
+// .footer__login-button {
+//   border: none;
+//   color: #fff;
+//   cursor: pointer;
+//   margin-left: 20px;
+//   padding: 10px;
+//   text-transform: uppercase;
+// }
 
-.footer__logout-button {
-  background-color: red;
-}
+// .footer__login-button {
+//   background-color: rgb(78, 240, 78);
+// }

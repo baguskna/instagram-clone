@@ -18,14 +18,6 @@ export class PostComponent implements OnInit, AfterContentInit {
   constructor( ) { }
 
   ngOnInit(): void {
-    // this.authService.user
-    // .subscribe(
-    //   (user: User) => {
-    //     this.postService.getLikesPost(user.uid)
-    //     .subscribe(
-    //     )
-    //   }
-    // );
   }
 
   ngAfterContentInit(): void {

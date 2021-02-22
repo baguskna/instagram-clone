@@ -19,6 +19,7 @@ import { PostComponent } from './post/post.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddComponent } from './add/add.component';
 import { ModalDeleteComponent } from './modal-delete/modal-delete.component';
+import { DropdownDirective } from './directives/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ModalDeleteComponent } from './modal-delete/modal-delete.component';
     PostComponent,
     FooterComponent,
     AddComponent,
-    ModalDeleteComponent
+    ModalDeleteComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
